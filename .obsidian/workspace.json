@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "bfd4614f0dc94c55",
+    "type": "split",
+    "children": [
+      {
+        "id": "dbd4a7da5329018f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d186186e66807d06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "microservices/HELP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "HELP"
+            }
+          },
+          {
+            "id": "2e12f1fe35e622cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notas/clase 2/APIs y microservicios.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "APIs y microservicios"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f7cbf6d8e855d281",
+    "type": "split",
+    "children": [
+      {
+        "id": "f2ff6b83ad64112f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fc4940de4d7b3b9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "90270c3390d38d10",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "141b314db0fecece",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6507bddcc976fc94",
+    "type": "split",
+    "children": [
+      {
+        "id": "79c0c6d0c7873413",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2305af9df4ca7d0f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "notas/clase 2/APIs y microservicios.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de APIs y microservicios"
+            }
+          },
+          {
+            "id": "b370ffc137f57b6e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "notas/clase 2/APIs y microservicios.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de APIs y microservicios"
+            }
+          },
+          {
+            "id": "00a3040363fb5d20",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "b472339d56513643",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "18ae73a68b39e7db",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "notas/clase 2/APIs y microservicios.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de APIs y microservicios"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "9fc4940de4d7b3b9",
+  "lastOpenFiles": [
+    "notas/clase 2/Pasted image 20260504131704.png",
+    "notas/clase 2/APIs y microservicios.md",
+    "notas/clase 2/Pasted image 20260504131925.png",
+    "Pasted image 20260504131743.png.md",
+    "notas/clase 1/Spring Boot.md",
+    "notas/clase 1/Pasted image 20260504131503.png",
+    "Pasted image 20260504131743.png",
+    "Pasted image 20260504131731.png",
+    "Pasted image 20260504131704.png",
+    "notas/clase 1/Pasted image 20260504131629.png",
+    "notas/clase 2",
+    "notas/clase 1",
+    "notas",
+    "notas/clase 1/Pasted image 20260504131437.png",
+    "notas/clase 1/Pasted image 20260504131418.png",
+    "microservices/HELP.md",
+    "README.md"
+  ]
+}
