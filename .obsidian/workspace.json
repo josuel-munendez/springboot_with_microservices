@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notas/clase 2/APIs y microservicios.md",
+                "file": "notas/clase 1/Spring Boot.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de APIs y microservicios"
+              "title": "Enlaces entrantes de Spring Boot"
             }
           },
           {
@@ -142,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notas/clase 2/APIs y microservicios.md",
+                "file": "notas/clase 1/Spring Boot.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de APIs y microservicios"
+              "title": "Enlaces salientes de Spring Boot"
             }
           },
           {
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notas/clase 2/APIs y microservicios.md",
+                "file": "notas/clase 1/Spring Boot.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de APIs y microservicios"
+              "title": "Esquema de Spring Boot"
             }
           }
         ]
@@ -212,8 +212,11 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "f5d11585bf53a427",
+  "active": "2e12f1fe35e622cb",
   "lastOpenFiles": [
+    "notas/clase 2/APIs y microservicios.md",
+    "notas/clase 2/Pasted image 20260504131925.png",
+    "notas/clase 1/Pasted image 20260504131925.png",
     "microservices/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst",
     "microservices/target/test-classes/com/sena/microservices/MicroservicesApplicationTests.class",
     "microservices/target/test-classes/com/sena/microservices",
@@ -224,11 +227,8 @@
     "microservices/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile",
     "microservices/target/maven-status/maven-compiler-plugin/testCompile",
     "microservices/target/generated-test-sources/test-annotations",
-    "microservices/target/generated-test-sources",
     "notas/clase 1/Spring Boot.md",
-    "notas/clase 2/APIs y microservicios.md",
     "microservices/HELP.md",
-    "notas/clase 2/Pasted image 20260504131925.png",
     "notas/clase 2/Pasted image 20260504131704.png",
     "Pasted image 20260504131743.png.md",
     "notas/clase 1/Pasted image 20260504131503.png",

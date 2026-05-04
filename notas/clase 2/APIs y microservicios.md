@@ -1,4 +1,6 @@
-Imagen ilustrativa de una solicitud http:
+
+# APIs y Microservicios — Clase 2
+
 ![[Pasted image 20260504131925.png]]
 
 Que informaciòn debe viajar en el body de una solicitud http
@@ -66,244 +68,157 @@ Para APIs más avanzadas:
 
 ```
 {  "usuario": {    "nombre": "Ana",    "roles": ["admin", "editor"]  },  "activo": true}
+
+# APIs y Microservicios — Clase 2
+
+## Solicitud HTTP: Conceptos y Ejemplo Visual
+
+![[Pasted image 20260504131925.png]]
+
+Una **solicitud HTTP** es enviada por el cliente (navegador o Postman) al servidor para solicitar un recurso. La estructura básica incluye:
+
+- **Línea de solicitud:** método, recurso, versión (ej: `GET /index.html HTTP/1.1`)
+- **Cabeceras (headers):** metadatos de la solicitud (ej: `Content-Type`, `Authorization`)
+- **Cuerpo (body):** datos enviados al servidor (solo en métodos como POST, PUT, PATCH)
+
+---
+
+## ¿Qué información viaja en el body?
+
+Depende del **método HTTP**. El body se usa para enviar **datos al servidor** cuando quieres **crear o modificar recursos**.
+
+### Tipos de datos comunes en el body
+
+| Tipo de información         | Ejemplo                                 | Uso típico                |
+|----------------------------|-----------------------------------------|---------------------------|
+| JSON                       | `{ "nombre": "Juan" }`                | APIs modernas             |
+| Texto plano                | `"Hola mundo"`                          | Logs, pruebas             |
+| Archivos/binarios          | imagen, PDF                             | Subidas                   |
+| Formulario (urlencoded)    | `user=juan&pass=123`                    | Login, formularios        |
+| XML                        | `<user>Juan</user>`                      | Sistemas legacy           |
+| Booleanos/números          | `true`, `42`                            | Configuración             |
+| Listas/arrays              | `[1,2,3]`                               | Datos estructurados       |
+
+
+**Ejemplo de body en JSON:**
+
+```json
+{
+  "nombre": "Juan",
+  "email": "juan@email.com",
+  "edad": 20
+}
 ```
 
----
+**Métodos que usan body:**
+- `POST` → crear datos
+- `PUT` / `PATCH` → actualizar datos
 
-## 🔹 ¿Cuándo NO se usa el body?
+**Métodos que NO usan body:**
+- `GET` (no debería llevar body)
+- `DELETE` (rara vez se usa)
 
-- `GET` ❌ (no debería llevar body)
-- `DELETE` ⚠️ (puede, pero rara vez se usa)
-
----
-
-## 🔹 Importante: Header relacionado
-
-El body siempre va acompañado de un header clave:
-
+**Header importante:**
 ```
 Content-Type: application/json
 ```
-
-Esto le dice al servidor cómo interpretar los datos.
-
----
-
-## 🔹 Resumen rápido
-
-|Método|¿Body?|Uso|
-|---|---|---|
-|GET|❌|Solo consulta|
-|POST|✅|Crear|
-|PUT|✅|Reemplazar|
-|PATCH|✅|Modificar parcialmente|
-|DELETE|⚠️|Opcional|
+Indica al servidor cómo interpretar los datos enviados.
 
 ---
 
-Si quieres, te puedo mostrar cómo se ve una solicitud HTTP completa (tipo “cruda” como la de tu imagen) para que conectes todo: línea, headers y body.
+## ¿Por dónde se puede mandar información en HTTP?
 
-que tipo de información se puede mandar y Por donde más se puede mandar informacion
+| Canal     | Ejemplo                                 | Uso principal                |
+|-----------|-----------------------------------------|------------------------------|
+| Body      | `{ "nombre": "Juan" }`                | Datos complejos, crear/actualizar |
+| Query     | `/usuarios?nombre=juan&edad=20`         | Filtros, búsquedas           |
+| Path      | `/usuarios/123`                         | Identificadores de recursos  |
+| Headers   | `Authorization: Bearer token123`        | Autenticación, configuración |
+| Cookies   | `Cookie: sessionId=abc123`              | Sesión, estado de usuario    |
 
-Buena pregunta — aquí es donde realmente entiendes cómo funciona HTTP “de verdad”.
-
----
-
-# 🔹 1. ¿Qué tipo de información se puede mandar?
-
-En una solicitud HTTP puedes enviar **casi cualquier tipo de dato**, siempre que lo serialices (lo conviertas a texto/binario).
-
-### 📦 Tipos más comunes
-
-|Tipo de información|Ejemplo|Uso típico|
-|---|---|---|
-|Datos simples|`"nombre": "Juan"`|Formularios, APIs|
-|JSON|`{ "id": 1, "activo": true }`|APIs modernas|
-|Texto plano|`"Hola mundo"`|Logs, pruebas|
-|Archivos/binarios|imagen, PDF|Subidas|
-|Formularios|`user=juan&pass=123`|Login|
-|XML|`<user>Juan</user>`|Sistemas legacy|
-|Booleanos/números|`true`, `42`|Configuración|
-|Listas/arrays|`[1,2,3]`|Datos estructurados|
-
-👉 En resumen: **datos estructurados, archivos o texto**.
+**Regla mental:**
+- Body → datos
+- Query → filtrar/buscar
+- Path → identificar
+- Headers → configuración
+- Cookies → estado
 
 ---
 
-# 🔹 2. ¿Por dónde se puede mandar información?
+## Ejemplo práctico: Calculadora con Spring Boot y Postman
 
-No solo existe el **body**. HTTP tiene **varios canales**:
+### Código del controlador (Java, Spring Boot)
+```java
+@RestController
+@RequestMapping("/calculadora")
+public class ControllerCalculadora {
+    // Suma usando parámetros en la URL (request param)
+    @GetMapping("/sumar")
+    public int sumar(@RequestParam int a, @RequestParam int b) {
+        return a + b;
+    }
+
+    // Suma usando el cuerpo de la petición (request body)
+    @PostMapping("/sumar")
+    public int sumarBody(@RequestBody SumaRequest request) {
+        return request.getA() + request.getB();
+    }
+
+    public static class SumaRequest {
+        private int a;
+        private int b;
+        public int getA() { return a; }
+        public void setA(int a) { this.a = a; }
+        public int getB() { return b; }
+        public void setB(int b) { this.b = b; }
+    }
+}
+```
+
+### Probar con Postman
+
+#### 1. Suma con parámetros en la URL (GET)
+- **Método:** GET
+- **URL:** `http://localhost:8081/calculadora/sumar?a=5&b=3`
+- **Respuesta esperada:** `8`
+
+#### 2. Suma con cuerpo (POST)
+- **Método:** POST
+- **URL:** `http://localhost:8081/calculadora/sumar`
+- **Body:** (raw, JSON)
+```json
+{
+  "a": 7,
+  "b": 2
+}
+```
+- **Respuesta esperada:** `9`
 
 ---
 
-## 🧠 1. Body (cuerpo)
+## Resumen visual de canales de información en HTTP
 
-📍 Para datos grandes o complejos
-
-```
-{  "nombre": "Juan"}
-```
-
-✔ Usado en: `POST`, `PUT`, `PATCH`  
-✔ Ideal para: JSON, archivos, estructuras grandes
-
----
-
-## 🔗 2. URL (Query Params)
-
-📍 Van después del `?`
-
-```
-/usuarios?nombre=juan&edad=20
-```
-
-✔ Usado en: `GET`  
-✔ Ideal para: filtros, búsquedas, paginación
+| Lugar   | Tipo de info    | Cuándo usar               |
+| ------- | --------------- | ------------------------- |
+| Body    | Datos complejos | Crear/actualizar recursos |
+| Query   | Filtros         | Consultas, búsquedas      |
+| Path    | Identificadores | Recursos específicos      |
+| Headers | Metadatos       | Auth, configuración       |
+| Cookies | Sesión          | Estado de usuario         |
 
 ---
 
-## 🧭 3. Path Params (ruta)
+## Reglas clave para el análisis y desarrollo de APIs
 
-📍 Parte de la URL
-
-```
-/usuarios/123
-```
-
-✔ Ideal para:
-
-- Identificar recursos
-- IDs
+- Usa el **body** para enviar datos complejos o crear/actualizar recursos.
+- Usa **query params** para filtros y búsquedas.
+- Usa **path params** para identificar recursos únicos.
+- Usa **headers** para autenticación y configuración.
+- Usa **cookies** para manejar sesiones y estado del usuario.
 
 ---
 
-## 🏷️ 4. Headers
-
-📍 Metadatos (NO datos principales)
-
-```
-Authorization: Bearer token123Content-Type: application/json
-```
-
-✔ Ideal para:
-
-- Autenticación 🔐
-- Tipo de datos
-- Configuración
-
----
-
-## 🍪 5. Cookies
-
-📍 Se envían automáticamente
-
-```
-Cookie: sessionId=abc123
-```
-
-✔ Ideal para:
-
-- Sesiones
-- Tracking
-- Login persistente
-
----
-
-# 🔹 3. Resumen visual rápido
-
-|Lugar|Tipo de info|Cuándo usar|
-|---|---|---|
-|Body|Datos complejos|Crear/actualizar|
-|Query (`?`)|Filtros|Consultas|
-|Path (`/id`)|Identificadores|Recursos|
-|Headers|Metadatos|Auth/config|
-|Cookies|Sesión|Estado usuario|
-
----
-
-# 🔥 Regla mental clave (tipo examen / práctica)
-
-- 📦 **Body → datos**
-- 🔗 **URL → identificar o filtrar**
-- 🏷️ **Headers → configuración**
-- 🍪 **Cookies → estado**
-
----
-
-Si quieres, en el siguiente paso te puedo armar una **solicitud HTTP completa real** combinando TODO (URL + headers + body) como lo verías en backend o con herramientas tipo Postman.
-
-ejemplos informacion que se puede mandar por la url vs informacion que se puede mandar por el body y header
-
-Perfecto, vamos directo a **comparar con ejemplos claros y realistas** 👇
-
----
-
-# 🔹 1. Información por **URL** (query + path)
-
-📍 Visible en la barra del navegador  
-📍 Se usa para **identificar o filtrar**
-
-### ✅ Ejemplos
-
-### 🔸 Path (identificar recurso)
-
-```
-GET /usuarios/123
-```
-
-👉 Envías:
-
-- `123` → ID del usuario
-
----
-
-### 🔸 Query params (filtros/búsqueda)
-
-```
-GET /usuarios?nombre=juan&edad=20&activo=true
-```
-
-👉 Envías:
-
-- `nombre=juan`
-- `edad=20`
-- `activo=true`
-
-📌 Casos típicos:
-
-- Búsquedas
-- Filtros
-- Paginación:
-
-```
-GET /productos?page=2&limit=10
-```
-
----
-
-### ❗ NO mandar por URL:
-
-- Contraseñas ❌
-- Tokens sensibles ❌
-- Datos grandes ❌
-
----
-
-# 🔹 2. Información por **BODY**
-
-📍 No visible en la URL  
-📍 Para **datos complejos o sensibles**
-
----
-
-### ✅ Ejemplo típico (crear usuario)
-
-```
-POST /usuariosContent-Type: application/json{  "nombre": "Juan",  "email": "juan@email.com",  "password": "123456"}
-```
-
-👉 Envías:
-
+> **Nota:** Estos conceptos y ejemplos son fundamentales para el desarrollo de microservicios y APIs RESTful en el contexto de la competencia SENA: _Desarrollar la solución de software de acuerdo con el diseño y metodologías de desarrollo_.
 - Datos completos del usuario
 - Información sensible (password)
 
