@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Suma</title>
+</head>
+<body>
+    <form action="/calculadora/sumar-form" method="post">
+        <input type="number" name="a" placeholder="Número 1" required>
+        <input type="number" name="b" placeholder="Número 2" required>
+        <button type="submit">Sumar</button>
+    </form>
+    <div>
+        <p th:if="${resultado != null}">Resultado: <span th:text="${resultado}"></span></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "crud-django",
+			"path": "../../Documents/GitHub/crud-django"
+		},
+		{
+			"name": "microservices",
+			"path": "."
+		},
+		{
+			"name": "springBootMicroservices-main",
+			"path": "../springBootMicroservices-main"
+		}
+	],
+	"settings": {}
+}

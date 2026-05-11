@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notas/clase 1/Spring Boot.md",
+                "file": "notas/clase 3/Clase 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spring Boot"
+              "title": "Clase 3"
             }
           },
           {
@@ -214,20 +214,22 @@
   },
   "active": "2e12f1fe35e622cb",
   "lastOpenFiles": [
+    "microservices/target/classes/com/sena/microservices/controller/ControllerCalculadora.class",
+    "microservices/target/classes/com/sena/microservices/controller/ControllerCalculadora$SumaRequest.class",
+    "microservices/target/classes/com/sena/microservices/controller/ControllerAdmin.class",
+    "microservices/target/classes/com/sena/microservices/MicroservicesApplication.class",
+    "microservices/target/classes/com/sena/microservices/controller/ControllerPrueba.class",
+    "microservices/target/classes/com/sena/microservices/controller",
+    "microservices/target/classes/com/sena/microservices",
+    "microservices/target/classes/com/sena",
+    "microservices/target/classes/com",
+    "microservices/target/classes/templates/formulario.html",
+    "microservices/target/classes/templates",
+    "notas/clase 1/Spring Boot.md",
+    "notas/clase 3/Clase 3.md",
     "notas/clase 2/APIs y microservicios.md",
     "notas/clase 2/Pasted image 20260504131925.png",
     "notas/clase 1/Pasted image 20260504131925.png",
-    "microservices/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst",
-    "microservices/target/test-classes/com/sena/microservices/MicroservicesApplicationTests.class",
-    "microservices/target/test-classes/com/sena/microservices",
-    "microservices/target/test-classes/com/sena",
-    "microservices/target/test-classes/com",
-    "microservices/target/test-classes",
-    "microservices/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst",
-    "microservices/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile",
-    "microservices/target/maven-status/maven-compiler-plugin/testCompile",
-    "microservices/target/generated-test-sources/test-annotations",
-    "notas/clase 1/Spring Boot.md",
     "microservices/HELP.md",
     "notas/clase 2/Pasted image 20260504131704.png",
     "Pasted image 20260504131743.png.md",
