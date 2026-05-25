@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notas/clase 3/Clase 3.md",
+                "file": "notas/clase 4/Clase 4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Clase 3"
+              "title": "Clase 4"
             }
           },
           {
@@ -216,17 +216,18 @@
   "lastOpenFiles": [
     "microservices/target/classes/com/sena/microservices/controller/ControllerCalculadora.class",
     "microservices/target/classes/com/sena/microservices/controller/ControllerCalculadora$SumaRequest.class",
-    "microservices/target/classes/com/sena/microservices/controller/ControllerAdmin.class",
-    "microservices/target/classes/com/sena/microservices/MicroservicesApplication.class",
+    "microservices/target/classes/com/sena/microservices/objects/Vehiculo.class",
+    "microservices/target/classes/com/sena/microservices/objects",
     "microservices/target/classes/com/sena/microservices/controller/ControllerPrueba.class",
+    "microservices/target/classes/com/sena/microservices/MicroservicesApplication.class",
+    "microservices/target/classes/com/sena/microservices/controller/ControllerAdmin.class",
     "microservices/target/classes/com/sena/microservices/controller",
     "microservices/target/classes/com/sena/microservices",
     "microservices/target/classes/com/sena",
     "microservices/target/classes/com",
-    "microservices/target/classes/templates/formulario.html",
-    "microservices/target/classes/templates",
-    "notas/clase 1/Spring Boot.md",
     "notas/clase 3/Clase 3.md",
+    "notas/clase 4/Clase 4.md",
+    "notas/clase 1/Spring Boot.md",
     "notas/clase 2/APIs y microservicios.md",
     "notas/clase 2/Pasted image 20260504131925.png",
     "notas/clase 1/Pasted image 20260504131925.png",
